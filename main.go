@@ -64,7 +64,7 @@ func main() {
 
 	timeUntilCurrentBlockIsDone := start.Add(time.Duration(config.FocusDuration) * TimeFactor)
 	if config.Blocks > 1 {
-		timeUntilCurrentBlockIsDone = timeUntilCurrentBlockIsDone.Add(time.Duration(config.FocusDuration) * TimeFactor)
+		timeUntilCurrentBlockIsDone = timeUntilCurrentBlockIsDone.Add(time.Duration(config.BreakDuration) * TimeFactor)
 	}
 
 	totalProjectedTime := (config.Blocks * config.FocusDuration) + ((config.Blocks - 1) * config.BreakDuration)
